@@ -84,6 +84,7 @@
         flex-direction: row;
         align-items: stretch;
         height: calc(var(--vh, 1vh) * 100);
+        margin-right: 2%;
         margin-bottom: 0px;
         padding-bottom: 0px;
     }
@@ -119,6 +120,7 @@
 @media (max-width: 1020px) {
     .intro-section {
         height: calc(var(--vh, 1vh) * 100);
+        margin-right: 2%;
     }
 
     .intro-text {
