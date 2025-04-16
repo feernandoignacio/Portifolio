@@ -101,8 +101,9 @@
     }
 
     .intro-text h1 {
-        font-size: 1.5rem;
-        line-height: 1.3;
+        font-size: 1.2rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
     }
 
     .intro-text p {
@@ -129,7 +130,9 @@
     }
 
     .intro-text h1 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
     }
 
     .intro-text p {
