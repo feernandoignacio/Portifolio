@@ -1,0 +1,262 @@
+/* Section */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    padding: 30px 4%;
+    min-height: 100vh;
+    font-family: "Abel", sans-serif;
+}
+
+/* Título */
+.skills-section .section-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    margin-top: 0;
+    color: #f2f2f2;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.skills {
+    padding-top: 10px;
+}
+
+.skills-section .section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #efc68a;
+    margin-top: 15px;
+}
+
+/* Descrição */
+.skills-description {
+    font-size: 1.2rem;
+    color: #c2c2c2;
+    line-height: 1.7;
+    font-family: "Abel", serif;
+    text-align: center;
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+
+/*metter*/
+.imagens-metter {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.medidor-figura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+}
+
+.medidor {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.medidor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.medidor:hover {
+    transform: scale(1.08);
+}
+
+.legenda-medidor {
+    font-size: 1rem;
+    color: #c2c2c2;
+    font-family: "Abel", serif;
+    font-style: italic;
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+.legenda-medidor .porcentagem {
+    color: #efc68a;
+    font-weight: bold;
+}
+
+/*idiomas*/
+.idiomas {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.medidor-menor {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+}
+
+.medidor-menor img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.medidor-menor:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+/*moldura*/
+.sobre-section+section {
+    padding-bottom: 90px;
+    position: relative;
+}
+
+.sobre-section+section::after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 20%;
+    width: 60%;
+    height: 3px;
+    background-image: linear-gradient(to right,
+            rgba(255, 255, 255, 0.2),
+            #efc68a,
+            #efc68a 50%,
+            #efc68a,
+            rgba(255, 255, 255, 0.2));
+    border-radius: 1.5px;
+    box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+/* Telas pequenas (até 600px) */
+@media (max-width: 600px) {
+    .skills-section {
+        padding: 40px 5%;
+    }
+
+    .skills-section .section-title {
+        font-size: 2.3rem;
+    }
+
+    .skills-description {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+    }
+
+    .imagens-metter {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .medidor-figura {
+        flex: 1 1 calc(50% - 30px);
+        /* duas colunas */
+        max-width: 160px;
+    }
+
+    .medidor {
+        width: 90px;
+        height: 90px;
+    }
+
+    .legenda-medidor {
+        font-size: 0.85rem;
+    }
+
+    .idiomas {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 60px;
+    }
+
+    .medidor-menor {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+/* Telas médias (até 1020px) */
+@media (max-width: 1020px) {
+    .skills-section .section-title {
+        font-size: 2.8rem;
+    }
+
+    .skills-description {
+        font-size: 1rem;
+        padding: 0 2%;
+    }
+
+    .imagens-metter {
+        gap: 60px;
+        justify-content: center;
+    }
+
+    .medidor-figura {
+        flex: 1 1 calc(50% - 60px);
+        max-width: 200px;
+    }
+
+    .medidor {
+        width: 100px;
+        height: 100px;
+    }
+
+    .legenda-medidor {
+        font-size: 0.9rem;
+    }
+
+    .idiomas {
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 80px;
+    }
+
+    .medidor-menor {
+        width: 40px;
+        height: 40px;
+    }
+}

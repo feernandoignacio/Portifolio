@@ -1,0 +1,32 @@
+.footer {
+    background-color: #0a0a0a;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.assinatura {
+    color: #888;
+    font-family: "Abel", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.icones-sociais a {
+    color: #efc68a;
+    margin: 0 12px;
+    font-size: 1.8rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icones-sociais a:hover {
+    color: #ffffff;
+    transform: scale(1.15);
+}

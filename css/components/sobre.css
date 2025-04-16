@@ -1,0 +1,277 @@
+/*Section*/
+.sobre-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+    color: #ffffff;
+    padding: 60px 4% 90px;
+    min-height: 100vh;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: "Abel", sans-serif;
+    position: relative;
+}
+
+.sobre-section::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), #efc68a, rgba(255, 255, 255, 0.1));
+}
+
+
+.sobre-section+section {
+    padding-top: 60px;
+}
+
+/* Section */
+.sobre-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+/* Imagem */
+.sobre-imagem {
+    flex: 1;
+    max-width: 500px;
+    height: 500px;
+    background-image: url(/assets/img/perfil.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    transition: transform 0.4s ease;
+    margin-top: 80px;
+}
+
+.sobre-imagem:hover {
+    transform: scale(1.03);
+}
+
+/* texto ao lado da imagem*/
+.sobre-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    color: #f2f2f2;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #efc68a;
+    margin-top: 15px;
+}
+
+.section-title .highlight {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 400;
+    opacity: 0.6;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+.sobre-text .intro-sobre {
+    font-size: 0.9rem;
+    color: #c2c2c2;
+    line-height: 1.7;
+    font-family: "Abel", serif;
+    font-style: italic;
+    margin-bottom: 60px;
+    margin-top: -20px;
+}
+
+.sobre-text p {
+    font-size: 1.3rem;
+    color: #c2c2c2;
+    line-height: 1.7;
+    font-family: "Abel", serif;
+    font-style: italic;
+}
+
+/* Texto abaixo da imagem */
+.sobre-expandido {
+    width: 100%;
+    padding: 0px 4%;
+    text-align: center;
+}
+
+.sobre-expandido p {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sobre-text p:last-child {
+    margin-bottom: 0;
+}
+
+.sobre-expandido::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(to right, #efc68a, transparent);
+    margin-bottom: 30px;
+    animation: growLine 1s ease forwards;
+}
+
+@keyframes growLine {
+    to {
+        width: 100%;
+    }
+}
+
+
+.curiosidades {
+    margin-top: 50px;
+}
+
+.curiosidades h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #f2f2f2;
+}
+
+.curiosidades ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.curiosidades li {
+    font-size: 0.7rem;
+    color: #c2c2c2;
+    line-height: 1.6;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    width: calc(50% - 10px);
+}
+
+.curiosidades li i.bi {
+    font-size: 1.8em;
+    margin-right: 8px;
+    vertical-align: middle;
+    color: #efc68a;
+}
+
+
+
+
+
+/* Telas pequenas (até 600px) */
+@media (max-width: 600px) {
+    .sobre-section {
+        padding: 10px 5% 10px;
+    }
+
+    .sobre-imagem {
+        height: 350px;
+    }
+
+    .section-title {
+        font-size: 2.3rem;
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+
+    .section-title .highlight {
+        font-size: 1.2rem;
+    }
+
+    .sobre-text p {
+        font-size: 1rem;
+    }
+
+    .sobre-text .intro-sobre {
+        font-size: 0.8rem;
+    }
+
+    .curiosidades h3 {
+        font-size: 1.1rem;
+    }
+
+    .curiosidades li {
+        font-size: 0.65rem;
+    }
+}
+
+
+/* Telas médias (até 1020px) */
+@media (max-width: 1020px) {
+    .sobre-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .sobre-imagem,
+    .sobre-text {
+        max-width: 90%;
+    }
+
+    .sobre-text {
+        margin-top: 20px;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .section-title .highlight {
+        font-size: 1.4rem;
+    }
+
+    .sobre-text p {
+        font-size: 1.1rem;
+    }
+
+    .sobre-text .intro-sobre {
+        font-size: 0.85rem;
+    }
+
+    .curiosidades li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
