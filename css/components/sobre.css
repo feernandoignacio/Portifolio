@@ -45,7 +45,7 @@
     flex: 1;
     max-width: 500px;
     height: 500px;
-    background-image: url(/assets/img/perfil.png);
+    background-image: url(../../assets/img/perfil.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
