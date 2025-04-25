@@ -195,6 +195,28 @@
     color: #efc68a;
 }
 
+.btn-curriculo {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #111;
+    color: #fff;
+    border: 2px solid #efc68a;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    margin-top: 1.5rem;
+}
+
+.btn-curriculo:hover {
+    background-color: #efc78a5e;
+    color: #fff;
+    border-color: #efc68a;
+    text-decoration: none;
+    transform: scale(1.1);
+    opacity: 1;
+}
+
 
 
 
