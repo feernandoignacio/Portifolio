@@ -12,6 +12,10 @@
     margin-bottom: 10px;
 }
 
+.titulo-projeto span {
+    color: #efc68a;
+}
+
 .descricao-projeto {
     color: #c2c2c2;
     font-family: 'Abel', sans-serif;
@@ -104,6 +108,43 @@
     max-width: 480px;
     margin: 0;
 }
+
+
+.icones-legenda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 6px;
+    padding: 0;
+}
+
+.icon-tec {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+
+
+.icon-tec:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.icones-legenda img {
+    all: unset;
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+
+
 
 /*Quadros futuros*/
 
