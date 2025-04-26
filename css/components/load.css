@@ -31,7 +31,7 @@
 /*Animação scroll*/
 [data-aos] {
     opacity: 0;
-    filter: blur(4px);
+    filter: blur(6px);
     transform: translateY(0px);
     transition: opacity 1.2s ease, filter 1.2s ease;
 }
