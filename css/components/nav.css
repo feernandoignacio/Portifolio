@@ -89,6 +89,7 @@ header ul li a.link-nav:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
 }
 
 .button-nav {
@@ -109,6 +110,7 @@ header ul li a.link-nav:hover::after {
     color: #efc68a;
     transform: scale(1.05);
     box-shadow: 0 0 12px #efc68a;
+    text-decoration: none;
 }
 
 

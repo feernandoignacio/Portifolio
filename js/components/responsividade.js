@@ -5,3 +5,5 @@
     }
     window.addEventListener('resize', adjustIntroHeight);
     window.addEventListener('load', adjustIntroHeight);
+
+

@@ -26,3 +26,18 @@
         transform: rotate(360deg);
     }
 }
+
+
+/*Animação scroll*/
+[data-aos] {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(0px);
+    transition: opacity 1.2s ease, filter 1.2s ease;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+}
