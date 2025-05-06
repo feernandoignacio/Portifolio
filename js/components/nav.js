@@ -3,6 +3,17 @@ window.addEventListener("scroll", function(){
     header.classList.toggle('scroll',window.scrollY > 0)
 })
 
+/*Tradutor*/
+const idiomaIcone = document.querySelector('.idioma-switcher i');
+const idiomaOpcoes = document.querySelector('.idioma-opcoes');
+
+idiomaIcone.addEventListener('click', () => {
+    idiomaOpcoes.classList.toggle('hidden');
+});
+
+
+
+
 /*Menu responsivel*/
 document.addEventListener('DOMContentLoaded', () => {
     const abrirMenu = document.querySelector('.abrir-menu');

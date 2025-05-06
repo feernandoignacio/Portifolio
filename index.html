@@ -46,20 +46,38 @@
     </div>
 
 
+
+    <!--lang-->
+    <div class="idioma-switcher">
+        <i class="bi bi-globe"></i>
+        <div class="idioma-opcoes hidden">
+            <span data-idioma="pt">🇧🇷</span>
+            <span data-idioma="en">🇺🇸</span>
+            <span data-idioma="es">🇪🇸</span>
+        </div>
+    </div>
+
+
+
     <!--nav-->
     <header class="header">
         <div class="nav-box">
 
-            <a href="#"><i class="bi bi-code"></i></a>
+            <a href="#" class="back-to-top" onclick="scrollToTop()">
+                <i class="bi bi-code"></i>
+            </a>
+
+
             <nav class="nav">
                 <ul>
-                    <li><a class="link-nav" href="#sobre-section">Sobre</a></li>
-                    <li><a class="link-nav" href="#skills-section">Skills</a></li>
-                    <li><a class="link-nav" href="#projetos-destaque">Projetos</a></li>
+                    <li><a class="link-nav" href="#sobre-section" data-i18n="nav-sobre">Sobre</a></li>
+                    <li><a class="link-nav" href="#skills-section" data-i18n="nav-skills">Skills</a></li>
+                    <li><a class="link-nav" href="#projetos-destaque" data-i18n="nav-projetos">Projetos</a></li>
                 </ul>
             </nav>
             <div class="button-contato">
-                <a class="button-nav" href="https://wa.me/5547997119898" target="_blank">Contato</a>
+                <a class="button-nav" href="https://wa.me/5547997119898" target="_blank"
+                    data-i18n="nav-contato">Contato</a>
             </div><!--Button-contato-->
         </div>
 
@@ -69,15 +87,18 @@
 
         <div class="menu-mobile" id="menu-mobile">
             <div class="btn-fechar">
-                <i class="bi bi-x-lg"></i>
+                <a href="#" class="back-to-top" onclick="scrollToTop()">
+                    <i class="bi bi-code"></i>
+                </a>
+
             </div>
 
             <nav>
                 <ul>
-                    <li><a class="link-nav" href="#sobre-section">Sobre</a></li>
-                    <li><a class="link-nav" href="#skills-section">Skills</a></li>
-                    <li><a class="link-nav" href="#projetos-destaque">Projetos</a></li>
-                    <li><a class="link-nav" href="https://wa.me/5547997119898">Contato</a></li>
+                    <li><a class="link-nav" href="#sobre-section" data-i18n="nav-sobre">Sobre</a></li>
+                    <li><a class="link-nav" href="#skills-section" data-i18n="nav-skills">Skills</a></li>
+                    <li><a class="link-nav" href="#projetos-destaque" data-i18n="nav-projetos">Projetos</a></li>
+                    <li><a class="link-nav" href="https://wa.me/5547997119898" data-i18n="nav-contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
@@ -93,11 +114,12 @@
         <div class="intro-image"></div>
         <div class="intro-text">
             <h1>
-                Código limpo, objetivo e semântico.<br>
-                Soluções eficientes, impulsionando o crescimento.<br>
-                <span class="assinatura">Quase uma obra de arte.</span>
+                <span data-i18n="intro-titulo">Código limpo, objetivo e semântico.</span><br>
+                <span data-i18n="intro-subtitulo">Soluções eficientes, impulsionando o crescimento.</span><br>
+                <span class="assinatura" data-i18n="intro-frase-final">Quase uma obra de arte.</span>
+
             </h1>
-            <p>
+            <p data-i18n="intro-desc">
                 Priorizo lógica clara, estrutura organizada e fácil manutenção.<br>
                 Trabalho com foco em performance, padronização e boas práticas.
             </p>
@@ -109,16 +131,16 @@
             <div class="sobre-imagem"></div>
             <div class="sobre-text">
                 <h2 class="section-title">
-                    Quem codifica não apenas executa<br>
-                    <span class="highlight">entende, planeja e transforma.</span>
+                    <span data-i18n="sobre-titulo">Quem codifica não apenas executa<br>
+                        <span class="highlight" data-i18n="sobre-subtitulo">Entende, planeja e transforma.</span>
                 </h2>
-                <p class="intro-sobre">
+                <p class="intro-sobre" data-i18n="sobre-intro">
                     Sou desenvolvedor FullStack com foco em soluções sólidas e bem estruturadas.<br>
                     Domino tanto o front quanto o back-end, e busco sempre entregar código limpo, funcional e
                     sustentável.<br>
                     Do esboço ao deploy — com precisão e propósito.
                 </p>
-                <p>
+                <p data-i18n="sobre-texto-1">
                     Olá! Meu nome é Lucas Fernando, porém todos me chamam de Fernando, tenho 29 anos, e sou casado com a
                     Letícia. Atualmente, estou passando por uma
                     mudança radical na minha trajetória profissional. Depois de atuar nas áreas da saúde e militar,
@@ -129,7 +151,7 @@
             </div>
         </div>
         <div class="sobre-expandido">
-            <p>
+            <p data-i18n="sobre-texto-2">
                 Falando um pouco sobre minhas experiências anteriores, trabalhei como Bombeiro Civil e também
                 prestei serviços como Bombeiro Militar em cidades próximas à minha. Tive a oportunidade de
                 realizar
@@ -141,7 +163,7 @@
                 gerenciar pressão e, acima de tudo, a manter a calma e a organização em qualquer situação.
             </p>
 
-            <p>
+            <p data-i18n="sobre-texto-3">
                 Assim, com a vontade de descobrir novos horizontes, mergulhei no mundo da programação (algo que
                 sempre gostei),
                 comecei meus estudos na DevClub. E aqui estou eu (risos), motivado para transformar obstáculos
@@ -151,17 +173,20 @@
         </div>
 
         <div class="curiosidades">
-            <h3>Curiosidades:</h3>
+            <h3 data-i18n="curiosidades-titulo">Curiosidades:</h3>
             <ul>
-                <li><i class="bi bi-check"></i>Amo plantas.</li>
-                <li><i class="bi bi-check"></i>Tenho um dog pitmonster chamado Dunamis.</li>
-                <li><i class="bi bi-check"></i>Academia: paixão que aviva minha disciplina e foco.</li>
-                <li><i class="bi bi-check"></i>Meu gosto artístico transita do clássico (música e artes visuais) ao
-                    soul e blues, com grande apreço pela cultura e história afro.</li>
+                <li><i class="bi bi-check"></i><span data-i18n="curiosidade-1">Amo plantas.</li>
+                <li><i class="bi bi-check"></i><span data-i18n="curiosidade-2">Tenho um dog pitmonster chamado Dunamis.
+                </li>
+                <li><i class="bi bi-check"></i><span data-i18n="curiosidade-3">Academia: paixão que aviva minha
+                        disciplina e foco.</li>
+                <li><i class="bi bi-check"></i><span data-i18n="curiosidade-4">Meu gosto artístico transita do clássico
+                        (música e artes visuais) ao
+                        soul e blues, com grande apreço pela cultura e história afro.</li>
             </ul>
         </div><!--curiosidades-->
 
-        <a href="curriculo-fernando.pdf" download class="btn-curriculo">
+        <a href="curriculo-fernando.pdf" download class="btn-curriculo" data-i18n="btn-curriculo">
             Baixar Currículo
         </a>
 
@@ -171,21 +196,23 @@
 
     <!--Skills-->
     <section id="skills-section" class="skills-section" data-aos="fade-up">
-        <h2 class="section-title">Skills</h2>
-        <p class="skills-description">
+        <h2 class="section-title" data-i18n="skills-titulo">Skills</h2>
+        <p class="skills-description" data-i18n="skills-descricao">
             Como desenvolvedor FullStack, a transparência é chave. Aqui, minhas habilidades técnicas, oferecendo uma
             visão honesta e direta do meu conhecimento em diversas ferramentas.
         </p>
 
         <div class="blocos-habilidades">
             <div class="bloco">
-                <h3>Front–End</h3>
-                <p>Desenvolvo aplicações web interativas com JavaScript, estruturando com HTML5 e estilizando com
+                <h3 data-i18n="skills-front-titulo"> Front–End</h3>
+                <p data-i18n="skills-front-texto"> Desenvolvo aplicações web interativas com JavaScript, estruturando
+                    com HTML5 e estilizando com
                     CSS3, criando interfaces modernas e responsivas.</p>
             </div>
             <div class="bloco">
-                <h3>Back–End</h3>
-                <p>Experiência em desenvolvimento back-end com C# e MySQL, aplicando lógica, consultas e
+                <h3 data-i18n="skills-back-titulo"> Back–End</h3>
+                <p data-i18n="skills-back-texto"> Experiência em desenvolvimento back-end com C# e MySQL, aplicando
+                    lógica, consultas e
                     manipulação de dados.</p>
             </div>
         </div>
@@ -223,10 +250,10 @@
 
 
         <div class="idioma-extra">
-            <h4>Idiomas</h4>
+            <h4 data-i18n="skills-idioma-titulo">Idiomas</h4>
             <div class="icone">
-                <img src="./assets/img/estados-unidos.png" alt="Inglês intermediário">
-                <span> Inglês Intermediário</span>
+                <img src="./assets/img/eua.png" alt="Inglês intermediário">
+                <span data-i18n="skills-idioma-nivel">Inglês Intermediário</span>
             </div>
         </div>
 
@@ -234,8 +261,8 @@
 
     <!--Projetos-->
     <section id="projetos-destaque" class="projeto-destaque" data-aos="fade-up">
-        <h2 class="titulo-projeto">Se o <span>Louvre</span> fosse <span>tech</span>...</h2>
-        <p class="descricao-projeto">
+        <h2 class="titulo-projeto" data-i18n="projeto-titulo">Se o <span>Louvre</span> fosse <span>tech</span>...</h2>
+        <p class="descricao-projeto" data-i18n="projeto-descricao">
             Intrigado pelas minhas habilidades? Sua intuição não falha.<br>
             Codificar é a minha arte, e cada projeto, uma nova tela.
         </p>
@@ -247,8 +274,8 @@
                     <img src="assets/img/previewer.png" alt="Preview do Projeto">
                 </a>
                 <div class="legenda-hover">
-                    <h3>Biogarden Paisagismo</h3>
-                    <span>
+                    <h3 data-i18n="projeto-nome1">Biogarden Paisagismo</h3>
+                    <span data-i18n="projeto-legenda1">
                         Design elegante com foco em natureza e sofisticação.<br>
                         Desenvolvido com
                         <div class="icones-legenda">
@@ -267,8 +294,8 @@
             <!-- Quadro 2 -->
             <div class="quadro-preview quadro-futuro">
                 <div class="quadro-futuro-conteudo">
-                    <h3>Em construção...</h3>
-                    <span>Mais uma obra-prima está por vir.</span>
+                    <h3 data-i18n="projeto-futuro-titulo">Em construção...</h3>
+                    <span data-i18n="projeto-futuro-texto">Mais uma obra-prima está por vir.</span>
                 </div>
             </div>
         </div>
@@ -276,7 +303,7 @@
 
     <footer class="footer" data-aos="fade-up">
         <div class="footer-container">
-            <p class="assinatura">Desenvolvido por Fernando Ignacio © 2025</p>
+            <p class="assinatura" data-i18n="footer-assinatura">Desenvolvido por Fernando Ignacio © 2025</p>
             <div class="icones-sociais">
                 <a href="https://github.com/feernandoignacio" target="_blank" aria-label="GitHub">
                     <i class="bi bi-github"></i>
@@ -299,6 +326,7 @@
     <script src="js/components/load.js"></script>
     <script src="js/components/responsividade.js"></script>
     <script src="js/components/nav.js"></script>
+    <script src="js/components/lang.js"></script>
 </body>
 
 </html>
