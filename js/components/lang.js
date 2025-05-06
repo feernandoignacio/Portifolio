@@ -12,9 +12,11 @@
                         if (textos[chave]) {
                             el.innerHTML = textos[chave];
                         }
+
+                        
+
+
                     });
                 });
         });
     });
-
-    

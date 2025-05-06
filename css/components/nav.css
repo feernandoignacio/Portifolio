@@ -355,7 +355,7 @@ header ul li a.link-nav:hover::after {
     }
 }
 
-@media (max-width: 1020px) and (min-width: 601px) {
+@media (max-width: 1020px) {
     header .nav-box ul {
         display: none;
     }
