@@ -220,8 +220,8 @@
 
 
 
-/* Telas pequenas (smartphones) */
-@media (max-width: 600px) {
+/*  Media Queries  */
+@media (max-width: 1020px) {
     .nav-box {
         justify-content: space-between;
         padding: 8px 0;
@@ -244,10 +244,7 @@
     }
 }
 
-
-
-/* Telas médias (tablets e notebooks pequenos) */
-@media (max-width: 1020px) {
+@media (max-width: 600px) {
     .nav-box {
         justify-content: space-between;
         padding: 8px 0;

@@ -198,26 +198,7 @@
 
 
 
-/* Telas pequenas (até 600px) */
-@media (max-width: 600px) {
-
-    .idioma-extra {
-        margin-top: 60px;
-    }
-
-    .idioma-extra h4 {
-        font-size: 0.95rem;
-        margin-bottom: 6px;
-    }
-
-    .idioma-extra img {
-        width: 25px;
-        height: 25px;
-    }
-}
-
-
-/* Telas médias (até 1020px) */
+/*  Media Queries  */
 @media (max-width: 1020px) {
 
     .skills-section .section-title {
@@ -241,5 +222,22 @@
     .idioma-extra img {
         width: 30px;
         height: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .idioma-extra {
+        margin-top: 60px;
+    }
+
+    .idioma-extra h4 {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+
+    .idioma-extra img {
+        width: 25px;
+        height: 25px;
     }
 }

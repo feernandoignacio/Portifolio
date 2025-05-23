@@ -124,6 +124,10 @@ header ul li a.link-nav:hover::after {
     text-decoration: none;
 }
 
+
+
+
+
 /*  Menu Responsivo  */
 .abrir-menu {
     display: none;
@@ -131,77 +135,18 @@ header ul li a.link-nav:hover::after {
     color: #d4af37;
     cursor: pointer;
     position: fixed;
-    top: 1.2rem;
-    right: 1.5rem;
+    top: 1.5rem;
+    right: 1.8rem;
     z-index: 101;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(4px);
 }
 
 .abrir-menu:hover {
-    transform: scale(1.1);
+    transform: rotate(10deg) scale(1.1);
 }
 
-.menu-mobile {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 60%;
-    height: 100vh;
-    background: linear-gradient(135deg, #1f1f1f 60%, #2c2c2c 100%);
-    z-index: 100;
-    transform: translateX(100%);
-    transition: transform 0.4s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-top: 3rem;
-}
-
-.menu-mobile.aberto {
-    transform: translateX(0);
-}
-
-.btn-fechar {
-    position: absolute;
-    top: 1.2rem;
-    left: 1.5rem;
-    font-size: 2.4rem;
-    color: #d4af37;
-    cursor: pointer;
-    z-index: 102;
-    transition: transform 0.2s ease;
-}
-
-.btn-fechar:hover {
-    transform: scale(1.1);
-}
-
-.menu-mobile nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-.menu-mobile nav ul li {
-    margin: 1.8rem 0;
-}
-
-.menu-mobile nav ul li a {
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
-    text-decoration: none;
-    font-size: 1.6rem;
-    letter-spacing: 1px;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.menu-mobile nav ul li a:hover {
-    color: #d4af37;
-    transform: translateX(5px);
-}
-
+/* Overlay escurecido */
 .overlay-menu {
     position: fixed;
     top: 0;
@@ -209,16 +154,86 @@ header ul li a.link-nav:hover::after {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
     z-index: 99;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
 .overlay-menu.aberto {
     opacity: 1;
     visibility: visible;
 }
+
+/* Menu lateral estilizado */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f1f1f 60%, #2c2c2c 100%);
+    border-left: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2.5rem 2rem 2rem;
+}
+
+
+.menu-mobile.aberto {
+    transform: translateX(0);
+}
+
+/* Botão de fechar */
+.btn-fechar {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.5rem;
+    font-size: 2.2rem;
+    color: #d4af37;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.btn-fechar:hover {
+    transform: rotate(-90deg) scale(1.1);
+    color: #ffffff;
+}
+
+/* Lista do menu */
+.menu-mobile nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    width: 100%;
+}
+
+.menu-mobile nav ul li {
+    margin: 1.2rem 0;
+    text-align: center;
+    position: relative;
+}
+
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 6px;
+}
+
 
 
 /* Idioma Switcher */
@@ -295,6 +310,7 @@ header ul li a.link-nav:hover::after {
 /*  Media Queries  */
 @media (max-width: 600px) {
 
+
     .idioma-switcher {
         right: 10px;
     }
@@ -325,13 +341,13 @@ header ul li a.link-nav:hover::after {
     .abrir-menu {
         display: block;
         font-size: 1.6rem;
-        top: 0.6rem;
+        top: 0, 9rem;
         right: 0.6rem;
     }
 
     .btn-fechar {
         font-size: 1.6rem;
-        top: 0.6rem;
+        top: 0.9rem;
         left: 0.6rem;
     }
 

@@ -116,7 +116,7 @@
     }
 }
 
-/* Telas médias (tablets e notebooks pequenos) */
+/*  Media Queries  */
 @media (max-width: 1020px) {
     .intro-section {
         height: calc(var(--vh, 1vh) * 100);
